@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import spidev
 import time
-from simple_pid import PID
+from simple_pid import PID # type: ignore
 GPIO.setmode(GPIO.BCM) #set GPIO mode
 
 RelayPin1 = 5 #1st from left
@@ -64,7 +64,7 @@ try:
 			GPIO.output(RelayPin1, GPIO.LOW)
 		
 		times1.append(time.time() - StartTime)
-		temps1.append(CurrentTemp1
+		temps1.append(CurrentTemp1)
 		time.sleep(0.3)
 			
 		if output2 <= 0.5:
