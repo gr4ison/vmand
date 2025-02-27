@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import spidev
 import time
-from simple-pid import PID # type: ignore
+from simple_pid import PID # type: ignore
 GPIO.setmode(GPIO.BCM) #set GPIO mode
 
 RelayPin1 = 5 #1st from left
