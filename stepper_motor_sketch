@@ -1,6 +1,8 @@
 # include <AccelStepper.h>
 # This is a sketch made for arduino IDE.
 
+#pul = pulse signal (steps)
+#dir = direction
 #define pul1 2
 #define dir1 3
 #define pul2 4
@@ -19,7 +21,7 @@ void setup()  {
 }
 
 void loop() {
-  speed1 = map(analogRead(A0), 0, 1023, -500, 500);
+  speed1 = map(analogRead(A0), 0, 1023, -500, 500); #mapping analog values of 0 to 1023 based on 0v to 5v on the interval -500 to 500. This allows forward anc backward control.
   stepper1.setSpeed(speed1);
   stepper1.runSpeed();
 
